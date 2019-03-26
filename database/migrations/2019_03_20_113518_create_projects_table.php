@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->integer('owner_id')->unsigned();
             $table->string('title');
             $table->text('description');
+            $table->text('notes')->nullable();
             $table->timestamps();
             $table->foreign('owner_id')
                ->references('id')
