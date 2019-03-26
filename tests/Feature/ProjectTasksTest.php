@@ -26,8 +26,6 @@ class ProjectTasksTest extends TestCase
    /** @test */
    function a_task_can_be_updated()
    {
-       $this->withoutExceptionHandling();
-
         $project = ProjectFactory::withTasks(1)->create();
 
         $this->actingAs($project->owner)
