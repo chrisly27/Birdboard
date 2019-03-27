@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +31,15 @@ Route::group(['middleware' => 'auth'], function(){
     Route::patch('/tasks/{task}', 'ProjectsTasksController@update');
     
     Route::post('/projects/{project}/tasks', 'ProjectsTasksController@store');
+
+
+
+
+    Route::patch('/projects/{project}/tasks/{task}', 'ProjectsTasksController@update');
+
+
+
+
 
     Route::get('/home', 'HomeController@index')->name('home');
 });
