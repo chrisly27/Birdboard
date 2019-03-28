@@ -21,6 +21,8 @@ class CreateActivitiesTable extends Migration
 
             $table->string('description');
 
+            $table->text('changes')->nullable();
+
             $table->timestamps();
 
             $table->foreign('project_id')
