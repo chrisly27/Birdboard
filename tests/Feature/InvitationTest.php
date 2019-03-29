@@ -48,7 +48,9 @@ class InvitationsTest extends TestCase
     /** @test */
     function the_email_address_must_be_associated_with_a_valid_birdboard_account()
     {
+        //$this->withoutExceptionHandling();
         $project = ProjectFactory::create();
+
         $this->actingAs($project->owner)
             ->post($project->path() . '/invitations', [
                 'email' => 'notauser@example.com'
