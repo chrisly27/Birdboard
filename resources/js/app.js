@@ -31,3 +31,5 @@ Vue.component('theme-switcher', require('./components/ThemeSwitcher.vue').defaul
 const app = new Vue({
     el: '#app'
 });
+
+
